@@ -1,0 +1,1276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\AdminControl.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\AdminControl.ico"
+IDI_ICON1               ICON                    "res\\sb001.ico"
+IDI_ICON2               ICON                    "res\\sb002.ico"
+IDI_ICON3               ICON                    "res\\sb003.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 AdminControl"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "AdminControl，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_ADMINCONTROL_DIALOG DIALOGEX 0, 0, 523, 409
+STYLE DS_SETFONT | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "AdminControl"
+MENU IDR_MENU1
+FONT 10, "宋体", 400, 0, 0x86
+BEGIN
+    CONTROL         "",IDC_TAB_PAG,"SysTabControl32",0x0,316,7,200,174
+    CONTROL         "",IDC_GAME_TREE,"SysTreeView32",WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,7,60,50
+END
+
+IDD_GAMEUSERLISTDLG DIALOGEX 0, 0, 669, 321
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_HSCROLL
+FONT 10, "微软雅黑", 400, 0, 0x86
+BEGIN
+    EDITTEXT        IDC_GAME_WIN,59,232,60,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_GAME_LOSE,59,258,61,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAME_RATE,170,201,57,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+    EDITTEXT        IDC_WARNING_WIN,170,233,57,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_WARNING_LOSE,170,257,57,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_SYS_SET,245,257,50,14
+    PUSHBUTTON      "预警置顶",IDC_WARSORT,503,283,50,14
+    PUSHBUTTON      "房间设置",IDC_ROOM_SET,442,288,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_GAME_USER_LIST,"SysListView32",LVS_REPORT | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,410,180
+    LTEXT           "场   次:",IDC_GAME,27,221,24,8
+    LTEXT           "",IDC_GAME_EVENT,81,206,40,8
+    LTEXT           "赢分数：",IDC_WINSCORE,27,234,28,8
+    LTEXT           "输分数：",IDC_LOSESCORE,27,262,28,8
+    LTEXT           "预 警 赢：",IDC_WARWIN,134,235,33,8
+    LTEXT           "预 警 输：",IDC_WARLOSE,134,261,33,8
+    LTEXT           "换牌比率：",IDC_RATE,133,205,35,8,NOT WS_VISIBLE
+    GROUPBOX        "数据监控",IDC_SYSSCORE_SET,19,193,305,95
+    PUSHBUTTON      "设置输",IDC_SETLOSE,528,251,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "设置赢",IDC_SETWIN,531,214,50,14,NOT WS_VISIBLE
+    GROUPBOX        "库存",IDC_STORAG,334,197,191,76
+    LTEXT           "库存起始值：",IDC_STORAG_START,340,230,53,10
+    LTEXT           "库 存 衰 减：",IDC_STORAGDE,340,252,51,11
+    EDITTEXT        IDC_STORAGESTART,411,230,95,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STORAGEDE,412,252,95,12,ES_AUTOHSCROLL
+    CONTROL         "启用库存",IDC_STORAG_ABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,341,206,42,10
+    PUSHBUTTON      "确定",IDC_STROAGE_SET,406,210,50,14
+    PUSHBUTTON      "刷新库存",IDC_STORAGE_REFRESH,468,208,50,14
+    LTEXT           "‰",IDC_THRU,486,265,10,8
+    PUSHBUTTON      "搜索用户",IDC_SEARCH_USER,302,298,50,14
+    EDITTEXT        IDC_USER_GAMEID,341,277,40,14,ES_AUTOHSCROLL
+    LTEXT           "搜索用户",IDC_STSEARCH,376,296,27,8
+    LTEXT           "",IDC_ALLUSER,27,294,48,8
+    LTEXT           "",IDC_ISCONNECT,144,294,8,8
+    LTEXT           "%",IDC_STHAU,237,204,8,8,NOT WS_VISIBLE
+    LTEXT           "",IDC_PROMPT,71,298,8,8
+    LTEXT           "",IDC_STSTOCK,187,298,8,8
+    LTEXT           "",IDC_STDAMP,221,295,8,8
+    GROUPBOX        "放水   (个人控制>库存>放水)",IDC_TANK,584,199,81,122
+    EDITTEXT        IDC_EDTANKING,616,269,40,14,ES_AUTOHSCROLL
+    LTEXT           "放水:",IDC_STTANKING,588,271,16,8
+    LTEXT           "静态",IDC_STTODAYSCORE,588,213,14,8
+    LTEXT           "静态",IDC_STTODAY_TANKING,588,231,14,8
+    LTEXT           "静态",IDC_STCUR_TANKING,587,250,14,8
+    EDITTEXT        IDC_EDSERVER_RATE,616,285,40,14,ES_AUTOHSCROLL
+    LTEXT           "放水概率:",IDC_STSERVER_RATE,589,285,29,8
+    PUSHBUTTON      "确定",IDC_BTTANKING,620,296,37,14
+    CONTROL         "启用",IDC_CHTANKING,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,588,299,27,10
+    LTEXT           "",IDC_STSTATE,613,244,8,8
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,550,154,40,14
+    PUSHBUTTON      "切换",IDC_BUTTON_SWICHTING,67,191,38,13
+    CONTROL         "",IDC_RICHEDIT_LOOKUP,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,550,178,40,14
+    PUSHBUTTON      "添加机器人",IDC_BT_ANDROIDCOUNT,137,291,50,14
+    EDITTEXT        IDC_ANDROIDCOUNT,78,292,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_LOGON DIALOGEX 0, 0, 259, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_NOINHERITLAYOUT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_LOGON_SERVER,84,53,121,12,CBS_SIMPLE | CBS_OWNERDRAWVARIABLE | CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_ACCOUNTS,84,77,121,12,CBS_SIMPLE | CBS_OWNERDRAWVARIABLE | CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_PASSWORDCONTROL,84,103,121,16,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "连接",IDOK,85,127,56,17
+    LTEXT           "登录服务器：",IDC_STATIC_SERVER,26,57,49,8
+    LTEXT           "游戏密码：",IDC_STATIC_PASS,34,107,41,8
+    COMBOBOX        IDC_GAME_ID,84,77,121,12,CBS_SIMPLE | CBS_OWNERDRAWVARIABLE | CBS_AUTOHSCROLL | CBS_HASSTRINGS | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDCANCEL,236,7,17,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_TAB_CONTROL,"SysTabControl32",TCS_TOOLTIPS,26,22,192,18
+    LTEXT           "游戏账号：",IDC_MODE_NAME,35,81,42,8
+    LTEXT           "静态",IDC_STCONNECT,27,145,17,8,NOT WS_VISIBLE
+    PUSHBUTTON      "清除记录",IDC_DELETE_RECORD,181,141,43,14,NOT WS_VISIBLE
+    PUSHBUTTON      "网络设置",IDC_PROXY_CONFIG,174,141,44,14,NOT WS_VISIBLE
+    CONTROL         "记住密码",IDC_REM_PASSWORD,"Button",BS_AUTOCHECKBOX | BS_FLAT | NOT WS_VISIBLE | WS_TABSTOP,190,143,53,10
+    PUSHBUTTON      "",IDC_REGISTER,169,144,56,17,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_BT_LOGON_LINK_1,165,143,56,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_BT_LOGON_LINK_2,168,141,56,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_BT_LOGON_LINK_3,172,145,56,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_BT_LOGON_LINK_4,192,147,56,14,NOT WS_VISIBLE
+    LTEXT           "",IDC_PASSWORD,132,145,121,16,SS_CENTERIMAGE | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP
+    LTEXT           "版本：4.3",IDC_STATIC,17,7,37,8
+END
+
+IDD_PASSWORD_KEYBOARD DIALOGEX 0, 0, 240, 82
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+END
+
+IDD_SKIN_CONTROL DIALOGEX 0, 0, 156, 124
+STYLE DS_SETFONT | WS_POPUP | WS_SYSMENU
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+END
+
+IDD_DLG_STATUS DIALOGEX 0, 0, 271, 61
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "",IDC_GIVE_UP,208,36,44,14
+END
+
+IDD_DLGSYSGAMESET DIALOGEX 0, 0, 779, 406
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_VSCROLL | WS_SYSMENU
+CAPTION "对话框"
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,584,366,50,14
+    PUSHBUTTON      "取消",IDCANCEL,679,366,50,14
+    GROUPBOX        "库存",IDC_STATIC,28,59,191,62
+    LTEXT           "库存起始值：",IDC_STATIC,33,71,42,8
+    LTEXT           "库 存 衰 减：",IDC_STATIC,33,93,42,8
+    GROUPBOX        "机器人设置",IDC_STATIC,21,125,400,141
+    LTEXT           "机器人取款：",IDC_STATIC,34,142,42,8
+    LTEXT           "机器人存款：",IDC_STATIC,158,142,42,8
+    LTEXT           "取款最小额数:",IDC_STATIC,34,163,44,8
+    LTEXT           "取款最大额数:",IDC_STATIC,272,142,44,8
+    LTEXT           "取 款 比 例:",IDC_STATIC,159,163,38,8
+    LTEXT           "机器人下注范围（上限）：",IDC_STATIC,33,185,83,8
+    LTEXT           "机器人下注范围(下限)：",IDC_STATIC,230,185,75,8
+    LTEXT           "机器人筹码范围(上限)：",IDC_STATIC,33,210,75,8
+    LTEXT           "机器人筹码范围(下限)：",IDC_STATIC,230,210,75,8
+    LTEXT           "机器人最多下注个数:",IDC_STATIC,33,239,65,8
+    LTEXT           "机器人区域下注限制:",IDC_STATIC,230,239,65,8
+    GROUPBOX        "机器人坐庄：",IDC_STATIC,222,71,200,50
+    CONTROL         "允许机器人坐庄",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,224,59,64,10
+    LTEXT           "坐庄次数：",IDC_STATIC,228,83,35,8
+    LTEXT           "机器人空几盘之后申请上庄:",IDC_STATIC,243,101,86,8
+    LTEXT           "最多申请个数:",IDC_STATIC,316,83,44,8
+    GROUPBOX        "百人游戏",IDC_STATIC,22,269,397,127
+    LTEXT           "坐庄金币数：",IDC_STATIC,31,305,42,8
+    LTEXT           "坐庄次数:",IDC_STATIC,31,341,31,8
+    LTEXT           "坐庄增加次数:",IDC_STATIC,31,367,44,8
+    LTEXT           "额外坐庄金币数:",IDC_STATIC,224,305,51,8
+    LTEXT           "额外次数:",IDC_STATIC,224,341,31,8
+    CONTROL         "系统坐庄",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,283,43,10
+    LTEXT           "大于此数才可做庄",IDC_STATIC,31,317,56,8
+    LTEXT           "当玩家Time次庄后若其金币大于其他申请玩家,再可坐次数",IDC_STATIC,31,381,176,8
+    LTEXT           "大于此金币后无论是否有大于其的申请玩家，均可继续",IDC_STATIC,224,317,166,8
+    LTEXT           "金币达到BankerScore后,Time次坐庄后再额外增加的坐庄次数",IDC_STATIC,224,353,188,8
+    GROUPBOX        "玩家设置",IDC_STATIC,426,16,331,50
+    LTEXT           "区域限制:",IDC_STATIC,592,33,31,8
+    LTEXT           "个人下注限制:",IDC_STATIC,435,33,44,8
+    GROUPBOX        "静态",IDC_STATIC_TITLE,14,7,749,392
+    GROUPBOX        "游戏时间设置",IDC_STATIC,27,16,394,40
+    LTEXT           "空闲时间：",IDC_STATIC,36,35,35,8
+    LTEXT           "叫庄时间：",IDC_STATIC,124,35,35,8
+    LTEXT           "下注时间：",IDC_STATIC,214,35,35,8
+    LTEXT           "开牌时间：",IDC_STATIC,315,35,35,8
+    EDITTEXT        IDC_EDIT1,75,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,163,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,257,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,354,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,81,70,108,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,81,92,108,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,267,81,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,370,81,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,335,99,54,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,89,142,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,205,163,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,204,142,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,334,142,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,90,163,55,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,114,182,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,303,182,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT17,114,209,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT18,303,209,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT19,114,237,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT20,303,237,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT21,82,301,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT22,288,301,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT23,82,338,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT24,288,338,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT25,82,365,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT26,490,33,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT27,635,33,100,14,ES_AUTOHSCROLL
+    LTEXT           "每个注区的最高封顶数量",IDC_STATIC,592,50,76,8
+    GROUPBOX        "通比牛牛",IDC_STATIC,426,75,330,266
+    LTEXT           "换牌百分比:",IDC_STATIC,439,93,38,8
+    LTEXT           "扣除机器人赢的分数的百分比:",IDC_STATIC,578,94,92,8
+    GROUPBOX        "单局输",IDC_STATIC,427,256,329,80
+    GROUPBOX        "输:",IDC_STATIC,427,114,329,61
+    LTEXT           "最大分数有概率换牌:",IDC_STATIC,440,130,65,8
+    LTEXT           "换牌百分比:",IDC_STATIC,578,130,38,8
+    LTEXT           "百分百换牌:",IDC_STATIC,440,154,38,8
+    GROUPBOX        "赢:",IDC_STATIC,427,181,329,61
+    LTEXT           "概率放水:",IDC_STATIC,440,198,31,8
+    LTEXT           "百分百放水:",IDC_STATIC,578,198,38,8
+    LTEXT           "百分百放水:",IDC_STATIC,440,223,38,8
+    LTEXT           "最大分数有概率换牌:",IDC_STATIC,440,276,65,8
+    LTEXT           "换牌百分比:",IDC_STATIC,600,277,38,8
+    LTEXT           "百分百换牌:",IDC_STATIC,440,313,38,8
+    EDITTEXT        IDC_EDIT28,479,90,79,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT29,674,92,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT30,509,130,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT31,632,128,77,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT32,509,153,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT33,483,195,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT34,483,221,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT35,632,195,83,14,ES_AUTOHSCROLL
+    LTEXT           "（*RobotProbabilityTanking）",IDC_STATIC,579,212,94,8
+    EDITTEXT        IDC_EDIT36,509,274,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT37,645,274,81,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT38,509,310,81,14,ES_AUTOHSCROLL
+END
+
+IDD_WEB DIALOGEX 0, 0, 395, 202
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_EXPLORER1,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,7,7,381,188
+END
+
+IDD_DLG_SET_STOCK DIALOGEX 0, 0, 617, 398
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STOCK_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,440,130
+    PUSHBUTTON      "设置",IDC_SET_STROAG,160,370,50,14
+    PUSHBUTTON      "获取(刷新)当前库存",IDC_GET_STROAGE,235,369,87,14
+    CONTROL         "全选",IDC_CK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,373,32,10
+    LTEXT           "静态",IDC_INFO,330,369,193,11
+    LTEXT           "",IDC_STTODAYSCORE,151,357,420,8
+    CONTROL         "",IDC_STOCK_USER_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,490,7,120,130
+    LTEXT           "静态",IDC_STWARINNING,563,369,47,8
+END
+
+IDD_LOG DIALOGEX 0, 0, 652, 374
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ADMIN_CTRL,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,23,201,344
+    LTEXT           "当前在线管理员：",IDC_STATIC,7,7,201,15
+    EDITTEXT        IDC_EDIT1,231,7,414,360,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+IDD_USERREMARKSINFO DIALOGEX 0, 0, 371, 205
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "备注:",IDC_STATIC,13,80,343,95
+    EDITTEXT        IDC_EDREMARKS,13,90,343,84,ES_AUTOHSCROLL
+    GROUPBOX        "用户信息:",IDC_STATIC,21,7,343,68
+    LTEXT           "UserID",IDC_STUSERINFO,26,19,315,44
+    PUSHBUTTON      "确定",IDC_BTADD,147,184,50,14
+    PUSHBUTTON      "取消",IDCANCEL,314,184,50,14,NOT WS_VISIBLE | WS_DISABLED
+    DEFPUSHBUTTON   "关闭",IDOK,234,184,50,14
+END
+
+IDD_FORMVIEW DIALOGEX 0, 0, 289, 181
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+END
+
+IDD_USER_INFO DIALOGEX 0, 0, 417, 213
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_HIDE_USER_DLG DIALOGEX 0, 0, 283, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "隐藏用户"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,226,138,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,269,99
+    PUSHBUTTON      "刷新",IDC_BTREFUSH,134,138,50,14
+    PUSHBUTTON      "删除",IDC_BUTTON2,45,138,50,14
+END
+
+IDD_DLGUSERINFO DIALOGEX 0, 0, 441, 264
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "设置",IDOK,280,243,50,14
+    PUSHBUTTON      "取消",IDCANCEL,384,243,50,14
+    GROUPBOX        "用户信息",IDC_STATIC,7,7,427,141
+    LTEXT           "赢最高：",IDC_STATIC,15,157,32,8
+    LTEXT           "输最高：",IDC_STATIC,15,183,34,8
+    LTEXT           "预警赢：",IDC_STATIC,138,157,33,8
+    LTEXT           "预警输：",IDC_STATIC,139,183,33,8
+    LTEXT           "换牌概率：",IDC_STATIC,262,157,41,8
+    LTEXT           "用户输赢分数：",IDC_STATIC,12,208,57,8
+    LTEXT           "状态：",IDC_STATIC,262,183,27,8
+    COMBOBOX        IDC_COMBO2,48,155,67,65,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,48,183,67,71,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,171,155,67,61,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,171,182,67,61,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,304,155,60,52,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO7,68,206,67,56,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "注：设置用户输赢分数，正数为赢，负数为输！",IDC_STATIC,14,227,169,8
+    EDITTEXT        IDC_EDIT1,15,18,409,125,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "万",IDC_STATIC,119,185,9,8
+    LTEXT           "万",IDC_STATIC,139,207,9,8
+    LTEXT           "万",IDC_STATIC,118,157,9,8
+    LTEXT           "万",IDC_STATIC,242,157,9,8
+    LTEXT           "万",IDC_STATIC,243,184,9,8
+    LTEXT           "%",IDC_STATIC,368,157,8,8
+    CONTROL         "玩家赢",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,292,182,36,10
+    CONTROL         "玩家输",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,340,182,39,10
+    CONTROL         "默认",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,391,182,28,10
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 730, 392
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,220,109
+    PUSHBUTTON      "刷新",IDC_BUTTON_REFUSH,214,370,50,15
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,245,7,193,107
+END
+
+IDD_USER_OFFLINE_DLG DIALOGEX 0, 0, 703, 395
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,433,136
+    PUSHBUTTON      "获取",IDC_BUTTON_GET_OFFLINE,289,374,50,14
+END
+
+IDD_DIALOG_SILVER DIALOGEX 0, 0, 393, 201
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,228,114
+END
+
+IDD_FREZON DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "冻结用户"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,162,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,162,50,14
+    EDITTEXT        IDC_EDIT1,7,37,302,109,ES_AUTOHSCROLL
+    LTEXT           "填写冻结理由：",IDC_STATIC,7,7,302,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,6,0,1
+ PRODUCTVERSION 1,6,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "UM"
+            VALUE "FileDescription", "UM"
+            VALUE "FileVersion", "1, 6, 0, 1"
+            VALUE "InternalName", "AdminControl.exe"
+            VALUE "LegalCopyright", "UM"
+            VALUE "OriginalFilename", "AdminControl.exe"
+            VALUE "ProductName", "UM"
+            VALUE "ProductVersion", "1, 6, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_ADMINCONTROL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 516
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 401
+    END
+
+    IDD_GAMEUSERLISTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 665
+        VERTGUIDE, 365
+        TOPMARGIN, 7
+    END
+
+    IDD_DLG_LOGON, DIALOG
+    BEGIN
+        RIGHTMARGIN, 253
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_PASSWORD_KEYBOARD, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_SKIN_CONTROL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DLGSYSGAMESET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 762
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 399
+    END
+
+    IDD_WEB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 388
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DLG_SET_STOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 610
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 391
+    END
+
+    IDD_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 645
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 367
+    END
+
+    IDD_USERREMARKSINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_FORMVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 286
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_USER_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 410
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_HIDE_USER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DLGUSERINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 434
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 723
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 385
+    END
+
+    IDD_USER_OFFLINE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 696
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 388
+    END
+
+    IDD_DIALOG_SILVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 386
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_FREZON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_COMMAND MENU 
+BEGIN
+    POPUP "游戏列表"
+    BEGIN
+        MENUITEM "进入游戏房间",                      IDM_ENTER_SERVER
+        MENUITEM "收缩列表",                        IDM_SHRINK_LIST
+        MENUITEM "展开列表",                        IDM_EXPAND_LIST
+    END
+    POPUP "用户命令"
+    BEGIN
+        MENUITEM "用户登录",                        IDM_USER_LOGON
+        MENUITEM "用户切换",                        IDM_SWITCH_ACCOUNTS
+    END
+    POPUP "游戏房间"
+    BEGIN
+        MENUITEM "更多颜色",                        IDM_MORE_COLOR
+        MENUITEM SEPARATOR
+        MENUITEM "游戏规则",                        IDM_GAME_RULE
+        MENUITEM "游戏排行",                        IDM_GAME_CHART
+        MENUITEM "关闭房间",                        IDM_DELETE_SERVER_ITEM
+        MENUITEM SEPARATOR
+        MENUITEM "显示所有信息",                      IDM_MESSAGE_SHOW_ALL
+        MENUITEM "屏蔽厌恶信息",                      IDM_MESSAGE_HIDE_DETEST
+        MENUITEM "只显示好友信息",                     IDM_MESSAGE_ONLY_FRIEND
+    END
+    POPUP "用户菜单"
+    BEGIN
+        MENUITEM "与用户私聊",                       IDM_CREATE_ISER_WISPER
+        MENUITEM "拷贝用户名",                       IDM_COPY_USER_NICKNAME
+        MENUITEM SEPARATOR
+        MENUITEM "设置为好友",                       IDM_SET_FRIEND_USER
+        MENUITEM "设置为厌恶",                       IDM_SET_DETEST_USER
+        MENUITEM SEPARATOR
+        MENUITEM "设置聊天对象",                      IDM_SET_CHAT_USER
+        MENUITEM "取消聊天对象",                      IDM_CANCEL_CHAT_USER
+        MENUITEM SEPARATOR
+        MENUITEM "查找在线用户",                      IDM_SEARCH_ONLINE_USER
+        MENUITEM "查看用户位置",                      IDM_SEE_USER_LOCATION
+        MENUITEM "查看用户资料",                      IDM_SHOW_USER_INFO
+        MENUITEM "用户信息管理",                      IDM_USER_INFO_MANAGER
+        MENUITEM "设置备注信息",                      IDM_SET_USER_NOTE
+        MENUITEM SEPARATOR
+        MENUITEM "一起玩游戏",                       IDM_PLAY_GAME_TOGETHER
+        MENUITEM "邀请加入游戏",                      IDM_INVITE_USER
+        MENUITEM "旁观用户游戏",                      IDM_LOOKON_USER
+        MENUITEM SEPARATOR
+    END
+    POPUP "私聊控制"
+    BEGIN
+        MENUITEM "按 Enter 键发送消息",               IDM_SEND_BY_ENTER
+        MENUITEM "按 Ctrl+Enter 键发送消息",          IDM_SEND_BY_CTRL_ENTER
+    END
+    POPUP "管理控制"
+    BEGIN
+        POPUP "游戏玩家管理"
+        BEGIN
+            MENUITEM "踢用户下线",                       IDM_KILL_USER
+            MENUITEM "禁止该用户大厅聊天",                   32892
+            MENUITEM "允许该用户大厅聊天",                   32894
+            MENUITEM "禁止该用户游戏聊天",                   32896
+            MENUITEM "允许该用户游戏聊天",                   32902
+            MENUITEM "禁止该用户私聊",                     32899
+            MENUITEM "允许该用户私聊",                     32901
+        END
+        MENUITEM "游戏房间管理",                      IDM_MANAGER_SERVER
+        MENUITEM "系统消息管理",                      IDM_MANAGER_MESSAGE
+        MENUITEM SEPARATOR
+        MENUITEM "踢用户下线...",                    IDM_KILL_USER
+    END
+    POPUP "辅助命令"
+    BEGIN
+        MENUITEM "无效命令",                        IDM_NULL_COMMAND
+    END
+END
+
+IDR_MENU1 MENU 
+BEGIN
+    MENUITEM "查看隐藏玩家",                      ID_CHECK_HIDE_USER
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "VIP"
+    BEGIN
+        MENUITEM "标记为土豪",                       ID_SETVIP
+        MENUITEM SEPARATOR
+        POPUP "设置赢"
+        BEGIN
+            MENUITEM "10%",                         ID_TH10
+            MENUITEM "20%",                         ID_TH20
+            MENUITEM "30%",                         ID_TH30
+            MENUITEM "40%",                         ID_TH40
+            MENUITEM "50%",                         ID_TH50
+            MENUITEM "60%",                         ID_TH60
+            MENUITEM "70%",                         ID_TH70
+            MENUITEM "80%",                         ID_TH80
+            MENUITEM "90%",                         ID_TH90
+            MENUITEM "100%",                        ID_TH100
+        END
+        POPUP "设置输"
+        BEGIN
+            MENUITEM "10%",                         ID_LTH10
+            MENUITEM "20%",                         ID_LTH20
+            MENUITEM "30%",                         ID_LTH30
+            MENUITEM "40%",                         ID_LTH40
+            MENUITEM "50%",                         ID_LTH50
+            MENUITEM "60%",                         ID_LTH60
+            MENUITEM "70%",                         ID_LTH70
+            MENUITEM "80%",                         ID_LTH80
+            MENUITEM "90%",                         ID_LTH90
+            MENUITEM "100%",                        ID_LTH100
+        END
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "设为代理",                        ID_USER_HIDE
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+    POPUP "Vip"
+    BEGIN
+        MENUITEM "标记为土豪",                       ID_SETVIP
+        MENUITEM SEPARATOR
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT1
+        MENUITEM SEPARATOR
+        MENUITEM "设为代理",                        ID_USER_HIDE
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+END
+
+IDR_MENU3 MENU 
+BEGIN
+    POPUP "删除VIP"
+    BEGIN
+        MENUITEM "删除土豪",                        ID_DEVIP
+        MENUITEM SEPARATOR
+        POPUP "设置赢"
+        BEGIN
+            MENUITEM "10%",                         ID_THW10
+            MENUITEM "20%",                         ID_THW20
+            MENUITEM "30%",                         ID_THW30
+            MENUITEM "40%",                         ID_THW40
+            MENUITEM "50%",                         ID_THW50
+            MENUITEM "60%",                         ID_THW60
+            MENUITEM "70%",                         ID_THW70
+            MENUITEM "80%",                         ID_THW80
+            MENUITEM "90%",                         ID_THW90
+            MENUITEM "100%",                        ID_THW100
+        END
+        POPUP "设置输"
+        BEGIN
+            MENUITEM "10%",                         ID_LTHA10
+            MENUITEM "20%",                         ID_LTHA20
+            MENUITEM "30%",                         ID_LTHA30
+            MENUITEM "40%",                         ID_LTHA40
+            MENUITEM "50%",                         ID_LTHA50
+            MENUITEM "60%",                         ID_LTHA60
+            MENUITEM "70%",                         ID_LTHA70
+            MENUITEM "80%",                         ID_LTHA80
+            MENUITEM "90%",                         ID_LTHA90
+            MENUITEM "100%",                        ID_LTHA100
+        END
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT2
+        MENUITEM SEPARATOR
+        MENUITEM "设为代理",                        ID_USER_HIDE
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+    POPUP "删除VIP"
+    BEGIN
+        MENUITEM "删除土豪",                        ID_DEVIP
+        MENUITEM SEPARATOR
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT3
+        MENUITEM SEPARATOR
+        MENUITEM "设为代理",                        ID_USER_HIDE
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+    POPUP "删除VIP"
+    BEGIN
+        MENUITEM "删除代理",                        ID_DEVIP
+        MENUITEM SEPARATOR
+        POPUP "设置赢"
+        BEGIN
+            MENUITEM "10%",                         ID_THW10
+            MENUITEM "20%",                         ID_THW20
+            MENUITEM "30%",                         ID_THW30
+            MENUITEM "40%",                         ID_THW40
+            MENUITEM "50%",                         ID_THW50
+            MENUITEM "60%",                         ID_THW60
+            MENUITEM "70%",                         ID_THW70
+            MENUITEM "80%",                         ID_THW80
+            MENUITEM "90%",                         ID_THW90
+            MENUITEM "100%",                        ID_THW100
+        END
+        POPUP "设置输"
+        BEGIN
+            MENUITEM "10%",                         ID_LTHA10
+            MENUITEM "20%",                         ID_LTHA20
+            MENUITEM "30%",                         ID_LTHA30
+            MENUITEM "40%",                         ID_LTHA40
+            MENUITEM "50%",                         ID_LTHA50
+            MENUITEM "60%",                         ID_LTHA60
+            MENUITEM "70%",                         ID_LTHA70
+            MENUITEM "80%",                         ID_LTHA80
+            MENUITEM "90%",                         ID_LTHA90
+            MENUITEM "100%",                        ID_LTHA100
+        END
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT2
+        MENUITEM SEPARATOR
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+    POPUP "删除VIP"
+    BEGIN
+        MENUITEM "删除代理",                        ID_DEVIP
+        MENUITEM SEPARATOR
+        POPUP "设置"
+        BEGIN
+            MENUITEM "设置",                          ID_SET_SELF
+            MENUITEM "赢最高：500万；输最高：-500万",          ID_SET_500W
+            MENUITEM "赢最高：1000万；输最高：-1000万",        ID_SET_1000W
+            MENUITEM "赢最高：2000万；输最高：-2000万",        ID_SET_2000W
+            MENUITEM "赢最高：5000万；输最高：-5000万",        ID_SET_5000W
+            MENUITEM "赢最高：8000万；输最高：-8000万",        ID_SET_8000W
+            MENUITEM "赢最高：1亿；输最高：-1亿",              ID_SET_1E
+            MENUITEM "赢最高：2亿；输最高：-2亿",              ID_SET_2E
+            MENUITEM "赢最高：5亿；输最高：-5亿",              ID_SET_5E
+        END
+        MENUITEM "恢复默认",                        ID_SET_DEFAULT3
+        MENUITEM SEPARATOR
+        MENUITEM "用户备注",                        ID_VIP_32911
+        MENUITEM "冻结用户",                        ID_FROZEN
+    END
+END
+
+IDR_MENU4 MENU 
+BEGIN
+    POPUP "删除"
+    BEGIN
+        MENUITEM "删除",                          ID_DELETE_HIDE_USER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WHISPER_USER_INFO_T BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_USER_INFO_T.bmp"
+IDB_WHISPER_USER_INFO_M BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_USER_INFO_M.bmp"
+IDB_WHISPER_USER_INFO_B BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_USER_INFO_B.bmp"
+IDB_WHISPER_CONTRUL_T   BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_CONTRUL_T.bmp"
+IDB_WHISPER_CONTRUL_M   BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_CONTRUL_M.bmp"
+IDB_WHISPER_CONTRUL_B   BITMAP                  "res\\PLAZA_WHISPER\\WHISPER_CONTRUL_B.bmp"
+IDB_USER_LIST_TR        BITMAP                  "res\\SERVER_USER\\USER_LIST_TR.bmp"
+IDB_USER_LIST_TM        BITMAP                  "res\\SERVER_USER\\USER_LIST_TM.bmp"
+IDB_USER_LIST_TL        BITMAP                  "res\\SERVER_USER\\USER_LIST_TL.bmp"
+IDB_USER_LIST_MR        BITMAP                  "res\\SERVER_USER\\USER_LIST_MR.bmp"
+IDB_USER_LIST_ML        BITMAP                  "res\\SERVER_USER\\USER_LIST_ML.bmp"
+IDB_USER_LIST_BR        BITMAP                  "res\\SERVER_USER\\USER_LIST_BR.bmp"
+IDB_USER_LIST_BM        BITMAP                  "res\\SERVER_USER\\USER_LIST_BM.bmp"
+IDB_USER_LIST_BL        BITMAP                  "res\\SERVER_USER\\USER_LIST_BL.bmp"
+IDB_USER_INFO_R         BITMAP                  "res\\USER_INFO\\USER_INFO_R.bmp"
+IDB_USER_INFO_M         BITMAP                  "res\\USER_INFO\\USER_INFO_M.bmp"
+IDB_USER_INFO_L         BITMAP                  "res\\USER_INFO\\USER_INFO_L.bmp"
+IDB_TABLE_TR            BITMAP                  "res\\SERVER_TABLE\\TABLE_TR.bmp"
+IDB_TABLE_TM            BITMAP                  "res\\SERVER_TABLE\\TABLE_TM.bmp"
+IDB_TABLE_TL            BITMAP                  "res\\SERVER_TABLE\\TABLE_TL.bmp"
+IDB_TABLE_MR            BITMAP                  "res\\SERVER_TABLE\\TABLE_MR.bmp"
+IDB_TABLE_ML            BITMAP                  "res\\SERVER_TABLE\\TABLE_ML.bmp"
+IDB_TABLE_GROUND        BITMAP                  "res\\SERVER_TABLE\\TABLE_GROUND.bmp"
+IDB_TABLE_BR            BITMAP                  "res\\SERVER_TABLE\\TABLE_BR.bmp"
+IDB_TABLE_BM            BITMAP                  "res\\SERVER_TABLE\\TABLE_BM.bmp"
+IDB_TABLE_BL            BITMAP                  "res\\SERVER_TABLE\\TABLE_BL.bmp"
+IDB_SHIELD_WHISPER      BITMAP                  "res\\PLAZA_WHISPER\\SHIELD_WHISPER.bmp"
+IDB_SET_FRIEND          BITMAP                  "res\\PLAZA_WHISPER\\SET_FRIEND.bmp"
+IDB_SET_DETEST          BITMAP                  "res\\PLAZA_WHISPER\\SET_DETEST.bmp"
+IDB_SERVICE_LIST_IMAGE  BITMAP                  "res\\SERVICE_LIST_IMAGE.bmp"
+IDB_SERVER_LIST_TR      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_TR.bmp"
+IDB_SERVER_LIST_TM      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_TM.bmp"
+IDB_SERVER_LIST_TL      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_TL.bmp"
+IDB_SERVER_LIST_MR      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_MR.bmp"
+IDB_SERVER_LIST_ML      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_ML.bmp"
+IDB_SERVER_LIST_IMAGE   BITMAP                  "res\\SERVER_LIST_IMAGE.bmp"
+IDB_SERVER_LIST_BR      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_BR.bmp"
+IDB_SERVER_LIST_BM      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_BM.bmp"
+IDB_SERVER_LIST_BL      BITMAP                  "res\\SERVER_LIST\\SERVER_LIST_BL.bmp"
+IDB_REMOTE_USER_IMAGE   BITMAP                  "res\\REMOTE_USER_IMAGE.bmp"
+IDB_RECEVE_WHISPER      BITMAP                  "res\\PLAZA_WHISPER\\REVECE_WHISPER.bmp"
+IDB_MESSAGE_SETTING     BITMAP                  "res\\PLAZA_WHISPER\\MESSAGE_SETTING.bmp"
+IDB_MATCH_TABLE_TR      BITMAP                  "res\\PLAZA_MATCH\\TABLE_TR.bmp"
+IDB_MATCH_TABLE_TM      BITMAP                  "res\\PLAZA_MATCH\\TABLE_TM.bmp"
+IDB_MATCH_TABLE_TL      BITMAP                  "res\\PLAZA_MATCH\\TABLE_TL.bmp"
+IDB_MATCH_BT_LEAVE      BITMAP                  "res\\PLAZA_MATCH\\BT_LEAVE.bmp"
+IDB_MATCH_BT_JOIN       BITMAP                  "res\\PLAZA_MATCH\\BT_JOIN.bmp"
+IDB_ITEM_FRAME_TR       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_TR.bmp"
+IDB_ITEM_FRAME_TM       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_TM.bmp"
+IDB_ITEM_FRAME_TL       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_TL.bmp"
+IDB_ITEM_FRAME_MR       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_MR.bmp"
+IDB_ITEM_FRAME_ML       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_ML.bmp"
+IDB_ITEM_FRAME_BR       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_BR.bmp"
+IDB_ITEM_FRAME_BM       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_BM.bmp"
+IDB_ITEM_FRAME_BL       BITMAP                  "res\\ITEM_FRAME\\ITEM_FRAME_BL.bmp"
+IDB_ITEM_BUTTON         BITMAP                  "res\\ITEM_FRAME\\ITEM_BUTTON.bmp"
+IDB_INPUT_WHISPER_TR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TR.bmp"
+IDB_INPUT_WHISPER_TM    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TM.bmp"
+IDB_INPUT_WHISPER_TL    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_TL.bmp"
+IDB_INPUT_WHISPER_MR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_MR.bmp"
+IDB_INPUT_WHISPER_ML    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_ML.bmp"
+IDB_INPUT_WHISPER_BR    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BR.bmp"
+IDB_INPUT_WHISPER_BM    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BM.bmp"
+IDB_INPUT_WHISPER_BL    BITMAP                  "Res\\PLAZA_WHISPER\\INPUT_WHISPER_BL.bmp"
+IDB_IMAGE_SEARCH        BITMAP                  "res\\IMAGE_SEARCH.bmp"
+IDB_IMAGE_REGISTER      BITMAP                  "res\\PLAZA_LOGON\\IMAGE_REGISTER.bmp"
+IDB_HISTORY_WHISPER_TR  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_TR.bmp"
+IDB_HISTORY_WHISPER_TM  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_TM.bmp"
+IDB_HISTORY_WHISPER_TL  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_TL.bmp"
+IDB_HISTORY_WHISPER_MR  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_MR.bmp"
+IDB_HISTORY_WHISPER_ML  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_ML.bmp"
+IDB_HISTORY_WHISPER_BR  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_BR.bmp"
+IDB_HISTORY_WHISPER_BM  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_BM.bmp"
+IDB_HISTORY_WHISPER_BL  BITMAP                  "Res\\PLAZA_WHISPER\\HISTORY_WHISPER_BL.bmp"
+IDB_GAME_PROPERTY_R     BITMAP                  "res\\SERVER_PROPERTY\\GAME_PROPERTY_R.bmp"
+IDB_GAME_PROPERTY_M     BITMAP                  "res\\SERVER_PROPERTY\\GAME_PROPERTY_M.bmp"
+IDB_GAME_PROPERTY_L     BITMAP                  "res\\SERVER_PROPERTY\\GAME_PROPERTY_L.bmp"
+IDB_GAME_PROPERTY_ITEM  BITMAP                  "res\\SERVER_PROPERTY\\GAME_PROPERTY_ITEM.bmp"
+IDB_FRAME_TR            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_TR.bmp"
+IDB_FRAME_TM            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_TM.bmp"
+IDB_FRAME_TL            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_TL.bmp"
+IDB_FRAME_MR            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_MR.bmp"
+IDB_FRAME_ML            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_ML.bmp"
+IDB_FRAME_BR            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_BR.bmp"
+IDB_FRAME_BM            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_BM.bmp"
+IDB_FRAME_BL            BITMAP                  "res\\PLATFORM_FRAME\\FRAME_BL.bmp"
+IDB_DOWN_LOAD_ITEM      BITMAP                  "res\\DOWN_LOAD\\DOWN_LOAD_ITEM.bmp"
+IDB_CHAT_WHISPER_TR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TR.bmp"
+IDB_CHAT_WHISPER_TM     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TM.bmp"
+IDB_CHAT_WHISPER_TL     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_TL.bmp"
+IDB_CHAT_WHISPER_MR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_MR.bmp"
+IDB_CHAT_WHISPER_ML     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_ML.bmp"
+IDB_CHAT_WHISPER_BR     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BR.bmp"
+IDB_CHAT_WHISPER_BM     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BM.bmp"
+IDB_CHAT_WHISPER_BL     BITMAP                  "Res\\PLAZA_WHISPER\\CHAT_WHISPER_BL.bmp"
+IDB_CHAT_TR             BITMAP                  "res\\SERVER_CHAT\\CHAT_TR.bmp"
+IDB_CHAT_TM             BITMAP                  "res\\SERVER_CHAT\\CHAT_TM.bmp"
+IDB_CHAT_TL             BITMAP                  "res\\SERVER_CHAT\\CHAT_TL.bmp"
+IDB_CHAT_MR             BITMAP                  "res\\SERVER_CHAT\\CHAT_MR.bmp"
+IDB_CHAT_ML             BITMAP                  "res\\SERVER_CHAT\\CHAT_ML.bmp"
+IDB_CHAT_BR             BITMAP                  "res\\SERVER_CHAT\\CHAT_BR.bmp"
+IDB_CHAT_BM             BITMAP                  "res\\SERVER_CHAT\\CHAT_BM.bmp"
+IDB_CHAT_BL             BITMAP                  "res\\SERVER_CHAT\\CHAT_BL.bmp"
+IDB_CANCEL_FRIEND       BITMAP                  "res\\PLAZA_WHISPER\\CANCEL_FRIEND.bmp"
+IDB_CANCEL_DETEST       BITMAP                  "res\\PLAZA_WHISPER\\CANCEL_DETEST.bmp"
+IDB_BT_WHISPER_USER_MENU BITMAP                  "res\\plaza_whisper\\BT_WHISPER_USER_MENU.bmp"
+IDB_BT_WHISPER_SEND_CONTROL BITMAP                  "res\\PLAZA_WHISPER\\BT_WHISPER_SEND_CONTROL.bmp"
+IDB_BT_WHISPER_HISTORY  BITMAP                  "res\\PLAZA_WHISPER\\BT_WHISPER_HISTORY.bmp"
+IDB_BT_WHISPER_BUTTON_3 BITMAP                  "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_3.bmp"
+IDB_BT_WHISPER_BUTTON_2 BITMAP                  "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_2.bmp"
+IDB_BT_WHISPER_BUTTON_1 BITMAP                  "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_1.bmp"
+IDB_BT_TABLE_BUTTON_5   BITMAP                  "res\\SERVER_TABLE\\BT_TABLE_BUTTON_5.bmp"
+IDB_BT_TABLE_BUTTON_4   BITMAP                  "res\\SERVER_TABLE\\BT_TABLE_BUTTON_4.bmp"
+IDB_BT_TABLE_BUTTON_3   BITMAP                  "res\\SERVER_TABLE\\BT_TABLE_BUTTON_3.bmp"
+IDB_BT_TABLE_BUTTON_2   BITMAP                  "res\\SERVER_TABLE\\BT_TABLE_BUTTON_2.bmp"
+IDB_BT_TABLE_BUTTON_1   BITMAP                  "res\\SERVER_TABLE\\BT_TABLE_BUTTON_1.bmp"
+IDB_BT_STATUS_CANCEL    BITMAP                  "res\\DLG_STATUS\\BT_STATUS_CANCEL.bmp"
+IDB_BT_SKIN             BITMAP                  "res\\PLATFORM_FRAME\\BT_SKIN.bmp"
+IDB_BT_SEND_CHAT        BITMAP                  "res\\SERVER_CHAT\\BT_SEND_CHAT.bmp"
+IDB_BT_RESORE           BITMAP                  "res\\PLATFORM_FRAME\\BT_RESORE.bmp"
+IDB_BT_REGISTER_CLOSE   BITMAP                  "res\\PLAZA_LOGON\\BT_REGISTER_CLOSE.bmp"
+IDB_BT_REGISTER         BITMAP                  "res\\PLAZA_LOGON\\BT_REGISTER.bmp"
+IDB_BT_QUIT_SERVER      BITMAP                  "res\\SERVER_TABLE\\BT_QUIT_SERVER.bmp"
+IDB_BT_MIN              BITMAP                  "res\\PLATFORM_FRAME\\BT_MIN.bmp"
+IDB_BT_MAX              BITMAP                  "res\\PLATFORM_FRAME\\BT_MAX.bmp"
+IDB_BT_LOGON_QUIT       BITMAP                  "res\\PLAZA_LOGON\\BT_LOGON_QUIT.bmp"
+IDB_BT_LOGON_LINK       BITMAP                  "res\\PLAZA_LOGON\\BT_LOGON_LINK.bmp"
+IDB_BT_LOGON_ITEM       BITMAP                  "res\\PLAZA_LOGON\\BT_LOGON_ITEM.bmp"
+IDB_BT_LOGON            BITMAP                  "res\\PLAZA_LOGON\\BT_LOGON.bmp"
+IDB_BT_ENQUIRE_CANCEL   BITMAP                  "res\\PLAZA_ENQUIRE\\BT_ENQUIRE_CANCEL.bmp"
+IDB_BT_DOWN_LOAD_NEXT   BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_NEXT.bmp"
+IDB_BT_DOWN_LOAD_LAST   BITMAP                  "res\\DOWN_LOAD\\BT_DOWN_LOAD_LAST.bmp"
+IDB_BT_COMBOBOX         BITMAP                  "res\\PLAZA_LOGON\\BT_COMBOBOX.bmp"
+IDB_BT_CLOSE            BITMAP                  "res\\PLATFORM_FRAME\\BT_CLOSE.bmp"
+IDB_BT_CHAT_SHORT       BITMAP                  "res\\SERVER_CHAT\\BT_CHAT_SHORT.bmp"
+IDB_BT_CHAT_BUTTON_4    BITMAP                  "res\\SERVER_CHAT\\BT_CHAT_BUTTON_4.bmp"
+IDB_BT_CHAT_BUTTON_3    BITMAP                  "res\\SERVER_CHAT\\BT_CHAT_BUTTON_3.bmp"
+IDB_BT_CHAT_BUTTON_2    BITMAP                  "res\\SERVER_CHAT\\BT_CHAT_BUTTON_2.bmp"
+IDB_BT_CHAT_BUTTON_1    BITMAP                  "res\\SERVER_CHAT\\BT_CHAT_BUTTON_1.bmp"
+IDB_BT_BROWSER          BITMAP                  "res\\WEB_BROWSER\\BT_BROWSER.bmp"
+IDB_BROWSER_TR          BITMAP                  "res\\WEB_BROWSER\\BROWSER_TR.bmp"
+IDB_BROWSER_TM          BITMAP                  "res\\WEB_BROWSER\\BROWSER_TM.bmp"
+IDB_BROWSER_TL          BITMAP                  "res\\WEB_BROWSER\\BROWSER_TL.bmp"
+IDB_BROWSER_MR          BITMAP                  "res\\WEB_BROWSER\\BROWSER_MR.bmp"
+IDB_BROWSER_ML          BITMAP                  "res\\WEB_BROWSER\\BROWSER_ML.bmp"
+IDB_BROWSER_BR          BITMAP                  "res\\WEB_BROWSER\\BROWSER_BR.bmp"
+IDB_BROWSER_BM          BITMAP                  "res\\WEB_BROWSER\\BROWSER_BM.bmp"
+IDB_BROWSER_BL          BITMAP                  "res\\WEB_BROWSER\\BROWSER_BL.bmp"
+IDB_BK_USER_LIST        BITMAP                  "res\\SERVER_FRAME\\BK_USER_LIST.bmp"
+IDB_BK_USER_INFO_SET    BITMAP                  "res\\USER_INFO\\BK_USER_INFO_SET.bmp"
+IDB_BK_USER_INFO        BITMAP                  "res\\USER_INFO\\BK_USER_INFO.bmp"
+IDB_BK_PLATFORM_3       BITMAP                  "res\\ITEM_FRAME\\BK_PLATFORM_3.bmp"
+IDB_BK_PLATFORM_2       BITMAP                  "res\\ITEM_FRAME\\BK_PLATFORM_2.bmp"
+IDB_BK_PLATFORM_1       BITMAP                  "res\\ITEM_FRAME\\BK_PLATFORM_1.bmp"
+IDB_BK_NAVIGATION       BITMAP                  "res\\PLATFORM_FRAME\\BK_NAVIGATION.bmp"
+IDB_BK_LIST             BITMAP                  "res\\SERVER_LIST\\BK_LIST.bmp"
+IDB_BK_GAME_LIST        BITMAP                  "res\\platform_frame\\BK_GAME_LIST.bmp"
+IDB_BK_ENQUIRE_BUTTON   BITMAP                  "res\\PLAZA_ENQUIRE\\BK_ENQUIRE_BUTTON.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+UNDER_WRITE_R           PNG                     "res\\USER_INFO\\UNDER_WRITE_R.PNG"
+UNDER_WRITE_M           PNG                     "res\\USER_INFO\\UNDER_WRITE_M.PNG"
+UNDER_WRITE_L           PNG                     "res\\USER_INFO\\UNDER_WRITE_L.PNG"
+TABLE_READY             PNG                     "res\\SERVER_TABLE\\TABLE_READY.PNG"
+TABLE_PASSWORD          PNG                     "res\\TABLE_PASSWORD.png"
+TABLE_NUMBER_NB         PNG                     "res\\SERVER_TABLE\\TABLE_NUMBER_NB.PNG"
+TABLE_NUMBER_BK         PNG                     "res\\SERVER_TABLE\\TABLE_NUMBER_BK.png"
+TABLE_LOCKER            PNG                     "res\\SERVER_TABLE\\TABLE_LOCKER.PNG"
+STATUS_POINT            PNG                     "res\\DLG_STATUS\\STATUS_POINT.png"
+STATUS_LINE             PNG                     "res\\DLG_STATUS\\STATUS_LINE.png"
+STATUS_IMAGE            PNG                     "res\\DLG_STATUS\\STATUS_IMAGE.png"
+SKIN_ITEM               PNG                     "res\\SKIN_ITEM.png"
+SKIN_COLOR              PNG                     "res\\SKIN_COLOR.png"
+SKIN_BUTTON             PNG                     "res\\SKIN_BUTTON.png"
+SERVICE_BAR_LOGO        PNG                     "res\\PLAZA_COLLOCATE\\SERVICE_BAR_LOGO.png"
+SERVICE_BAR_IMAGE       PNG                     "res\\PLAZA_COLLOCATE\\SERVICE_BAR_IMAGE.png"
+SERVICE_BAR_BT          PNG                     "res\\PLAZA_COLLOCATE\\SERVICE_BAR_BT.png"
+SERVER_LIST_ARROW       PNG                     "res\\SERVER_LIST\\SERVER_LIST_ARROW.png"
+SEARCH_LOGO             PNG                     "res\\SEARCH_LOGO.png"
+REGISTER_TITLE          PNG                     "res\\PLAZA_LOGON\\REGISTER_TITLE.png"
+PLATFORM_LOGO           PNG                     "res\\PLATFORM_FRAME\\PLATFORM_LOGO.PNG"
+PASSWORD_LEVEL          PNG                     "res\\PASSWORD_LEVEL.png"
+MATCH_NUM_ORANGE        PNG                     "res\\PLAZA_MATCH\\NUMBER_ORANGE.png"
+MATCH_NUM_GREEN         PNG                     "res\\PLAZA_MATCH\\NUMBER_GREEN.png"
+MATCH_LINE              PNG                     "res\\PLAZA_MATCH\\LINE.png"
+LOGON_TITILE            PNG                     "res\\PLAZA_LOGON\\LOGON_TITILE.PNG"
+LOAD_STATUS             PNG                     "res\\LOAD_STATUS.png"
+LIST_TITLE_R            PNG                     "res\\SERVER_LIST\\LIST_TITLE_R.png"
+LIST_TITLE_M            PNG                     "res\\SERVER_LIST\\LIST_TITLE_M.png"
+LIST_TITLE_L            PNG                     "res\\SERVER_LIST\\LIST_TITLE_L.png"
+DOWN_LOAD_SCALE         PNG                     "res\\DOWN_LOAD\\DOWN_LOAD_SCALE.png"
+DLG_REGISTER_BACK       PNG                     "res\\PLAZA_LOGON\\DLG_REGISTER_BACK.png"
+DLG_LOGON_BACK          PNG                     "res\\PLAZA_LOGON\\DLG_LOGON_BACK.PNG"
+DLG_ENQUIRE_BACK        PNG                     "res\\PLAZA_ENQUIRE\\DLG_ENQUIRE_BACK.png"
+COLLOCATE_BAR_LOGO      PNG                     "res\\PLAZA_COLLOCATE\\COLLOCATE_BAR_LOGO.png"
+COLLOCATE_BAR_BT        PNG                     "res\\PLAZA_COLLOCATE\\COLLOCATE_BAR_BT.PNG"
+BT_WHISPER_HISTORY      PNG                     "res\\PLAZA_WHISPER\\BT_WHISPER_HISTORY.png"
+BT_WHISPER_BUTTON_3     PNG                     "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_3.png"
+BT_WHISPER_BUTTON_2     PNG                     "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_2.png"
+BT_WHISPER_BUTTON_1     PNG                     "res\\PLAZA_WHISPER\\BT_WHISPER_BUTTON_1.png"
+BT_USER_LIST_SHOW       PNG                     "res\\SERVER_FRAME\\BT_USER_LIST_SHOW.png"
+BT_USER_LIST_HIDE       PNG                     "res\\SERVER_FRAME\\BT_USER_LIST_HIDE.png"
+BT_USER_INFO_SET        PNG                     "res\\USER_INFO\\BT_USER_INFO_SET.png"
+BT_USER_INFO_4          PNG                     "res\\USER_INFO\\BT_USER_INFO_4.png"
+BT_USER_INFO_3          PNG                     "res\\USER_INFO\\BT_USER_INFO_3.png"
+BT_USER_INFO_2          PNG                     "res\\USER_INFO\\BT_USER_INFO_2.png"
+BT_USER_INFO_1          PNG                     "res\\USER_INFO\\BT_USER_INFO_1.png"
+BT_UNLOCK_LIST          PNG                     "res\\SERVER_LIST\\BT_UNLOCK_LIST.png"
+BT_TABLE_BUTTON_5       PNG                     "res\\SERVER_TABLE\\BT_TABLE_BUTTON_5.png"
+BT_TABLE_BUTTON_4       PNG                     "res\\SERVER_TABLE\\BT_TABLE_BUTTON_4.png"
+BT_TABLE_BUTTON_3       PNG                     "res\\SERVER_TABLE\\BT_TABLE_BUTTON_3.png"
+BT_TABLE_BUTTON_2       PNG                     "res\\SERVER_TABLE\\BT_TABLE_BUTTON_2.png"
+BT_TABLE_BUTTON_1       PNG                     "res\\SERVER_TABLE\\BT_TABLE_BUTTON_1.png"
+BT_STOP                 PNG                     "res\\WEB_BROWSER\\BT_STOP.png"
+BT_RELOAD               PNG                     "res\\WEB_BROWSER\\BT_RELOAD.png"
+BT_REGISTER_QUIT        PNG                     "res\\PLAZA_LOGON\\BT_REGISTER_QUIT.png"
+BT_REGISTER_ENTER       PNG                     "res\\PLAZA_LOGON\\BT_REGISTER_ENTER.png"
+BT_QUIT_SERVER          PNG                     "res\\SERVER_TABLE\\BT_QUIT_SERVER.png"
+BT_PLATFORM_3           PNG                     "res\\ITEM_FRAME\\BT_PLATFORM_3.png"
+BT_PLATFORM_2           PNG                     "res\\ITEM_FRAME\\BT_PLATFORM_2.png"
+BT_PLATFORM_1           PNG                     "res\\ITEM_FRAME\\BT_PLATFORM_1.png"
+BT_NEXT                 PNG                     "res\\WEB_BROWSER\\BT_NEXT.png"
+BT_NAVIGATION_5         PNG                     "res\\PLATFORM_FRAME\\BT_NAVIGATION_5.png"
+BT_NAVIGATION_4         PNG                     "res\\PLATFORM_FRAME\\BT_NAVIGATION_4.png"
+BT_NAVIGATION_3         PNG                     "res\\PLATFORM_FRAME\\BT_NAVIGATION_3.png"
+BT_NAVIGATION_2         PNG                     "res\\PLATFORM_FRAME\\BT_NAVIGATION_2.png"
+BT_NAVIGATION_1         PNG                     "res\\PLATFORM_FRAME\\BT_NAVIGATION_1.PNG"
+BT_LOGON_REGISTER       PNG                     "res\\PLAZA_LOGON\\BT_LOGON_REGISTER.png"
+BT_LOGON_LINK_4         PNG                     "res\\PLAZA_LOGON\\BT_LOGON_LINK_4.png"
+BT_LOGON_LINK_3         PNG                     "res\\PLAZA_LOGON\\BT_LOGON_LINK_3.png"
+BT_LOGON_LINK_2         PNG                     "res\\PLAZA_LOGON\\BT_LOGON_LINK_2.png"
+BT_LOGON_LINK_1         PNG                     "res\\PLAZA_LOGON\\BT_LOGON_LINK_1.png"
+BT_LOGON_ITEM           PNG                     "res\\PLAZA_LOGON\\BT_LOGON_ITEM.png"
+BT_LOGON_ENTER          PNG                     "res\\PLAZA_LOGON\\BT_LOGON_ENTER.png"
+BT_LOCK_LIST            PNG                     "res\\SERVER_LIST\\BT_LOCK_LIST.png"
+BT_LAST                 PNG                     "res\\WEB_BROWSER\\BT_LAST.PNG"
+BT_HOME                 PNG                     "res\\WEB_BROWSER\\BT_HOME.png"
+BT_GAME_LIST_SHOW       PNG                     "res\\PLATFORM_FRAME\\BT_GAME_LIST_SHOW.png"
+BT_GAME_LIST_HIDE       PNG                     "res\\PLATFORM_FRAME\\BT_GAME_LIST_HIDE.png"
+BT_ENQUIRE_SWITCH       PNG                     "res\\PLAZA_ENQUIRE\\BT_ENQUIRE_SWITCH.png"
+BT_ENQUIRE_SERVER       PNG                     "res\\PLAZA_ENQUIRE\\BT_ENQUIRE_SERVER.png"
+BT_ENQUIRE_PLAZA        PNG                     "res\\PLAZA_ENQUIRE\\BT_ENQUIRE_PLAZA.png"
+BT_ENQUIRE_CANCEL       PNG                     "res\\PLAZA_ENQUIRE\\BT_ENQUIRE_CANCEL.png"
+BT_CLOSE                PNG                     "res\\PLATFORM_FRAME\\BT_CLOSE.PNG"
+BT_CHAT_BUTTON_4        PNG                     "res\\SERVER_CHAT\\BT_CHAT_BUTTON_4.png"
+BT_CHAT_BUTTON_3        PNG                     "res\\SERVER_CHAT\\BT_CHAT_BUTTON_3.png"
+BT_CHAT_BUTTON_2        PNG                     "res\\SERVER_CHAT\\BT_CHAT_BUTTON_2.png"
+BT_CHAT_BUTTON_1        PNG                     "res\\SERVER_CHAT\\BT_CHAT_BUTTON_1.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND_CUR            CURSOR                  "res\\HAND_CUR.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WEB DLGINIT
+BEGIN
+    IDC_EXPLORER1, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x3b1e, 0x0000, 0x1fa0, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 progress(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\AdminControl.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

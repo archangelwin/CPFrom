@@ -1,0 +1,210 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\UserHangUp.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\UserHangUp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_USERHANGUP_DIALOG DIALOGEX 0, 0, 563, 361
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "UserHangUp"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "打开文件",IDC_OPEN_FILE,275,193,50,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,549,177
+    LTEXT           "登陆IP:",IDC_STATIC,35,200,23,8
+    PUSHBUTTON      "连接",IDC_CONNECT,275,222,50,14
+    EDITTEXT        IDC_IPCONTROL,85,197,73,14,ES_AUTOHSCROLL
+    GROUPBOX        "设置",IDC_STATIC,14,186,241,56
+    LTEXT           "备用IP：",IDC_BKADDRESS,35,227,28,8
+    EDITTEXT        IDC_BKIP,85,224,71,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_SET,187,196,50,14
+    PUSHBUTTON      "切换连接",IDC_CHANGE_CONNECT,187,223,50,14
+    GROUPBOX        "添加删除用户",IDC_STATIC,15,251,240,94
+    EDITTEXT        IDC_ACCOUNT,94,240,60,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "UserID：",IDC_STATIC,25,269,28,8
+    LTEXT           "密码：",IDC_STATIC,134,269,22,8
+    EDITTEXT        IDC_PASSWORD,172,266,64,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_GAMECOMB,62,291,110,71,CBS_DROPDOWNLIST | CBS_SORT | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "游戏：",IDC_STATIC,26,293,22,8
+    PUSHBUTTON      "添加",IDC_BUTTON2,20,314,52,14
+    PUSHBUTTON      "删除",IDC_BUTTON3,80,314,53,14
+    GROUPBOX        "添加游戏",IDC_STATIC,270,244,255,102
+    LTEXT           "游戏名称：",IDC_STATIC,281,287,35,8
+    EDITTEXT        IDC_GAME_NAME,324,283,74,14,ES_AUTOHSCROLL
+    LTEXT           "GameID:",IDC_STATIC,409,286,24,8
+    EDITTEXT        IDC_GAME_KINDID,441,283,69,14,ES_AUTOHSCROLL
+    LTEXT           "端口(Port)：",IDC_STATIC,281,306,44,8
+    EDITTEXT        IDC_GAME_PORT,324,303,74,14,ES_AUTOHSCROLL
+    LTEXT           "版本号：",IDC_STATIC,409,306,30,8
+    EDITTEXT        IDC_GAME_VERSION,441,303,69,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加",IDC_BUTTON4,279,328,53,14
+    PUSHBUTTON      "批量增加",IDC_BUTTON6,199,290,52,14,WS_DISABLED
+    PUSHBUTTON      "删除游戏",IDC_BUTTON7,449,253,50,14,WS_DISABLED
+    COMBOBOX        IDC_COMBO2,317,255,116,68,CBS_DROPDOWNLIST | CBS_SORT | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "现有游戏：",IDC_STATIC,280,257,37,8
+    GROUPBOX        "游戏信息：",IDC_STATIC,276,269,243,57
+    PUSHBUTTON      "更改游戏信息",IDC_BUTTON8,346,328,61,14
+    PUSHBUTTON      "获取更新信息",IDC_BUTTON9,341,193,50,14,WS_DISABLED
+    PUSHBUTTON      "清空用户",IDC_BUTTON5,199,314,50,14,WS_DISABLED
+    PUSHBUTTON      "更改用户信息",IDC_BUTTON10,140,314,50,14
+    COMBOBOX        IDC_COMBO_ACCOUNT,62,266,61,77,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "刷新游戏",IDC_BUTTON11,342,223,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,1
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "UserHangUp"
+            VALUE "FileDescription", "UserHangUp"
+            VALUE "FileVersion", "1,2,0,1"
+            VALUE "InternalName", "UserHangUp.exe"
+            VALUE "LegalCopyright", "UserHangUp"
+            VALUE "OriginalFilename", "UserHangUp.exe"
+            VALUE "ProductName", "UserHangUp"
+            VALUE "ProductVersion", "1,2,0,1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_USERHANGUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 556
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 354
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\UserHangUp.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
