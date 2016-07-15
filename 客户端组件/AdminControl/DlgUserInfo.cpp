@@ -43,6 +43,8 @@ void CDlgUserInfo::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_COMBO7, m_ComSetWinLose);
 	DDX_Control(pDX, IDC_EDIT1, m_EdUserInfo);
 	DDX_Control(pDX, IDCANCEL, m_BtRaUserWin);
+	DDX_Control(pDX, IDC_LIST1, m_ListCtrl);
+	DDX_Control(pDX, IDC_total, m_total);
 }
 
 
@@ -138,7 +140,92 @@ BOOL CDlgUserInfo::OnInitDialog()
 	
 	OnSetUserInfo();
 
+	m_ListCtrl.SetExtendedStyle(LVS_EX_GRIDLINES | LVS_EX_FULLROWSELECT |   LVS_EDITLABELS|   LVS_EX_SUBITEMIMAGES ); 
+	m_ListCtrl.InsertColumn(0,"UserID");
+	m_ListCtrl.InsertColumn(1,"GameID");
+	m_ListCtrl.InsertColumn(2,"昵称");
+	m_ListCtrl.InsertColumn(3,"累计输赢");
+	m_ListCtrl.InsertColumn(4,"总转出");
+	m_ListCtrl.InsertColumn(5,"总转入");
+	m_ListCtrl.InsertColumn(6,"差值");
+	m_ListCtrl.InsertColumn(7,"金币");
+	m_ListCtrl.InsertColumn(8,"银行");
+	m_ListCtrl.InsertColumn(9,"转出");
+	m_ListCtrl.InsertColumn(10,"转入");
+	m_ListCtrl.InsertColumn(11,"是否在线");
+	m_ListCtrl.InsertColumn(12,"充值");
+	m_ListCtrl.SetColumnWidth(0,2);
+	m_ListCtrl.SetColumnWidth(1,50);
+	m_ListCtrl.SetColumnWidth(2,90);
+	m_ListCtrl.SetColumnWidth(3,75);
+	m_ListCtrl.SetColumnWidth(4,75);
+	m_ListCtrl.SetColumnWidth(5,75);
+	m_ListCtrl.SetColumnWidth(6,75);
+	m_ListCtrl.SetColumnWidth(7,75);
+	m_ListCtrl.SetColumnWidth(8,75);
+	m_ListCtrl.SetColumnWidth(9,75);
+	m_ListCtrl.SetColumnWidth(10,75);
+	m_ListCtrl.SetColumnWidth(11,50);
+	m_ListCtrl.SetColumnWidth(12,50);
+	m_totalWL=0;
+	for (int i=0;i<m_tagSameMachine.dwCount;i++)
+	{
+		OnInsertSameMachine(m_tagSameMachine.SameMachineItem[i],i);
+
+		m_totalWL += m_tagSameMachine.SameMachineItem[i].lWinScore;
+	}
+	CString strtotal;
+	strtotal.Format("总账号：%d 个, 总输赢：%I64d",m_tagSameMachine.dwCount,m_totalWL);
+	m_total.SetWindowText(strtotal);
+
 	return TRUE;
+}
+
+VOID CDlgUserInfo::OnInsertSameMachine(tagUMSameMachineItem tagsameitem,DWORD samecount)
+{
+	CString strinfo;
+	DWORD tiemcount = samecount;
+// 	for (int i=0;i<samecounts;i++)
+// 	{	
+		strinfo.Format("%d",tagsameitem.dwUserID);
+ 		m_ListCtrl.InsertItem(tiemcount,strinfo);
+ 		m_ListCtrl.SetItemText(tiemcount,0,strinfo);
+		strinfo.Format("%d",tagsameitem.dwGameID);
+ 		m_ListCtrl.SetItemText(tiemcount,1,strinfo);
+
+		strinfo.Format("%s",tagsameitem.szNickName);
+ 		m_ListCtrl.SetItemText(tiemcount,2,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lWinScore);
+ 		m_ListCtrl.SetItemText(tiemcount,3,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lAllOutScore);
+		m_ListCtrl.SetItemText(tiemcount,4,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lAllInScore);
+		m_ListCtrl.SetItemText(tiemcount,5,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lDifference);
+		m_ListCtrl.SetItemText(tiemcount,6,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lScore);
+ 		m_ListCtrl.SetItemText(tiemcount,7,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lInsure);
+ 		m_ListCtrl.SetItemText(tiemcount,8,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lOutScore);
+		m_ListCtrl.SetItemText(tiemcount,9,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lInScore);
+		m_ListCtrl.SetItemText(tiemcount,10,strinfo);
+
+		strinfo.Format("%d",tagsameitem.wOnline);
+		m_ListCtrl.SetItemText(tiemcount,11,strinfo);
+
+		strinfo.Format("%I64d",tagsameitem.lMoney);
+		m_ListCtrl.SetItemText(tiemcount,12,strinfo);
+//	}
 }
 
 VOID CDlgUserInfo::SwitchScoreFormat(SCORE lScore, UINT uSpace, LPTSTR pszBuffer, WORD wBufferSize)

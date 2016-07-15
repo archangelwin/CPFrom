@@ -99,6 +99,8 @@ public:
 
 	void OnFrezon(tagUserID* UserId);
 
+	void OnGetSameMachine(DWORD UserId);
+
 	CString GetModuleDir();
 public:
 	//获取用户设置

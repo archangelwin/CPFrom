@@ -6,6 +6,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 #define  MAX_SERVERID		    500										//最大服务器id
+
+#define  MAX_SAME_MACHINE        50
 //用户管理服务器
 //I D 登录
 #define  MDM_UM_LOGIN			10										//房间服务器登录到UM
@@ -72,7 +74,8 @@
 #define  SUB_UM_GAMESCORE				226								//查询分数
 #define  SUB_UM_FORZENUSER				227		                        //冻结用户
 
-
+#define  SUB_UM_SAME_MACHINE            229								//获取同机器码用户
+#define  SUB_UM_KICK_USER				230								//踢用户
 
 
 #define  UM_MAX_ANDROID					MAX_ANDROID*20					//机器人数
@@ -559,8 +562,53 @@ struct tagUserID
 	{
 		memset(this, 0, sizeof(tagUserID));
 	}
+	DWORD							dwType;								//0:封号，1：请出房间
 	TCHAR							szUserID[256];						//用户ID 如 （102，103，105）
 	TCHAR							szForzen[64];						//原因
+};
+
+//用户分数信息
+struct tagUMSameMachineItem
+{
+	tagUMSameMachineItem()
+	{
+		memset(this, 0, sizeof(tagUMSameMachineItem));
+	}
+	DWORD						dwUserID;
+	DWORD						dwGameID;		
+	DWORD						dwKindID;							//游戏种类
+	DWORD						dwServerID;							//房间id
+	WORD						wOnline;							//0：离线，1：在线
+	TCHAR						szNickName[LEN_ACCOUNTS];			//用户昵称
+
+	//积分信息
+	SCORE						lScore;								//用户分数
+	SCORE						lInsure;							//用户银行
+
+	//转帐
+	SCORE						lOutScore;							//转出
+	SCORE						lInScore;							//转入
+	//TCHAR						szLastOut[64];						//最后一次转出详细
+	//TCHAR						szLastIn[64];						//最后一次转入详细
+
+	SCORE						lAllOutScore;						//总转出
+	SCORE						lAllInScore;						//总转入
+	SCORE						lDifference;						//差值		
+
+	SCORE						lWinScore;							//输赢分数
+
+	SCORE						lMoney;								//充值	
+};
+
+//用户分数信息
+struct tagUMSameMachine
+{
+	tagUMSameMachine()
+	{
+		memset(this, 0, sizeof(tagUMSameMachine));
+	}
+	DWORD  dwCount;
+	tagUMSameMachineItem  SameMachineItem[MAX_SAME_MACHINE];
 };
 
 #pragma pack()

@@ -438,7 +438,7 @@ CGameUserManager::~CGameUserManager()
 	//旁观用户
 	m_UserItemStorage.Append(m_UserItemLookon);
 	//比赛用户
-	m_UserItemStorage.Append(m_UserItemMatch);
+//	m_UserItemStorage.Append(m_UserItemMatch);
 
 	//游戏用户
 	for (WORD i=0;i<CountArray(m_pTableUserItem);i++)
@@ -448,7 +448,7 @@ CGameUserManager::~CGameUserManager()
 
 	//清理用户
 	m_UserItemLookon.RemoveAll();
-	m_UserItemMatch.RemoveAll();
+//	m_UserItemMatch.RemoveAll();
 
 	return;
 }
@@ -495,11 +495,11 @@ bool CGameUserManager::ResetUserItem()
 		if (m_pTableUserItem[i]!=NULL) m_UserItemStorage.Add(m_pTableUserItem[i]);
 	}
 	m_UserItemStorage.Append(m_UserItemLookon);
-	m_UserItemStorage.Append(m_UserItemMatch);
+//	m_UserItemStorage.Append(m_UserItemMatch);
 
 	//设置变量
 	m_UserItemLookon.RemoveAll();
-	m_UserItemMatch.RemoveAll();
+//	m_UserItemMatch.RemoveAll();
 	ZeroMemory(m_pTableUserItem,sizeof(m_pTableUserItem));
 
 	return true;
@@ -562,27 +562,27 @@ bool CGameUserManager::DeleteUserItem(IClientUserItem * pIClientUserItem)
 	}
 
 	//比赛用户20141208
-	pUserItemActive=NULL;
-	for (INT_PTR i=0;i<m_UserItemMatch.GetCount();i++)
-	{
-		pUserItemActive=m_UserItemMatch[i];
-		if (pIClientUserItem==pUserItemActive)
-		{
-			//删除用户
-			m_UserItemMatch.RemoveAt(i);
-			m_UserItemStorage.Add(pUserItemActive);
+	//pUserItemActive=NULL;
+	//for (INT_PTR i=0;i<m_UserItemMatch.GetCount();i++)
+	//{
+	//	pUserItemActive=m_UserItemMatch[i];
+	//	if (pIClientUserItem==pUserItemActive)
+	//	{
+	//		//删除用户
+	//		m_UserItemMatch.RemoveAt(i);
+	//		m_UserItemStorage.Add(pUserItemActive);
 
-			//删除通知
-			ASSERT(m_pIUserManagerSink!=NULL);
-			m_pIUserManagerSink->OnUserItemDelete(pUserItemActive);
+	//		//删除通知
+	//		ASSERT(m_pIUserManagerSink!=NULL);
+	//		m_pIUserManagerSink->OnUserItemDelete(pUserItemActive);
 
-			//设置数据
-			pUserItemActive->m_cbCompanion=CP_NORMAL;
-			ZeroMemory(&pUserItemActive->m_UserInfo,sizeof(tagUserInfo));
+	//		//设置数据
+	//		pUserItemActive->m_cbCompanion=CP_NORMAL;
+	//		ZeroMemory(&pUserItemActive->m_UserInfo,sizeof(tagUserInfo));
 
-			return true;
-		}
-	}
+	//		return true;
+	//	}
+	//}
 	//错误断言
 	ASSERT(FALSE);
 

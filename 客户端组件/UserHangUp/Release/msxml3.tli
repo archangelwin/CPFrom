@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (7358b4ce).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (50908dca).
 //
-// c:\cplatform\客户端组件\userhangup\release\msxml3.tli
+// d:\backcpfrom\cpfrom\客户端组件\userhangup\release\msxml3.tli
 //
 // Wrapper implementations for Win32 type library msxml3.dll
-// compiler-generated file created 12/31/14 at 09:28:21 - DO NOT EDIT!
+// compiler-generated file created 07/11/16 at 10:38:18 - DO NOT EDIT!
 
 #pragma once
 

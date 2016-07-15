@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (7b0fceb2).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (392de09e).
 //
-// c:\cplatform\客户端组件\游戏框架\release\msxml3.tli
+// d:\backcpfrom\cpfrom\客户端组件\游戏框架\release\msxml3.tli
 //
 // Wrapper implementations for Win32 type library msxml3.dll
-// compiler-generated file created 12/31/14 at 09:29:22 - DO NOT EDIT!
+// compiler-generated file created 07/11/16 at 10:39:58 - DO NOT EDIT!
 
 #pragma once
 

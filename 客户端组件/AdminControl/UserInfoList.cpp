@@ -112,6 +112,7 @@ BEGIN_MESSAGE_MAP(CUserInfoList, CGridListCtrlGroups)
 ON_COMMAND(ID_USER_HIDE, &CUserInfoList::OnUserHide)
 ON_COMMAND(ID_CHECK_HIDE_USER, &CUserInfoList::OnCheckHideUser)
 ON_COMMAND(ID_FROZEN, &CUserInfoList::OnFrozen)
+ON_COMMAND(ID_Kick, &CUserInfoList::OnKick)
 END_MESSAGE_MAP()
 
 BOOL CUserInfoList::OnItemDblClick(NMHDR* pNMHDR, LRESULT* pResult)
@@ -127,38 +128,42 @@ BOOL CUserInfoList::OnItemDblClick(NMHDR* pNMHDR, LRESULT* pResult)
 	if (nRow != -1)
 	{
 		m_nItem = nRow;
-		tagUMUserScoreSet lUserScoreSet = ((CUserInfoItem * )GetItemData(nRow))->m_tagUMUserScoreSet;
+		//tagUMUserScoreSet lUserScoreSet = ((CUserInfoItem * )GetItemData(nRow))->m_tagUMUserScoreSet;
 		m_UserScoreSet = ((CUserInfoItem * )GetItemData(nRow))->m_tagUMUserScoreSet;
 
 		m_ServerID = ((CUserInfoItem * )GetItemData(nRow))->m_tagUMUserScoreSet.dwServerID;
-		CDlgUserInfo UserInfoDlg;
-		UserInfoDlg.m_tagUserInfo = lUserScoreSet;
 
-		if (UserInfoDlg.DoModal() == IDOK)
-		{
-			//return FALSE;
-			CString WinMax,LoseMax,NotifyWin,NotifyLose,lRate,WinLoseScore,ltype;
+		ASSERT(CMissionUserInfo::GetInstance()!=NULL);
+		CMissionUserInfo::GetInstance()->OnGetSameMachine(m_UserScoreSet.dwUserID);
 
-			if (UserInfoDlg.m_AllowSet == 1)
-			{
-				if (_ttoi64(WinLoseScore)>_ttoi64(WinMax) || _ttoi64(WinLoseScore)<_ttoi64(LoseMax))
-				{
-					AfxMessageBox("设置输赢分数不能高于赢最高,或者低于输最高！");
-					return FALSE;
-				}
-				OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
-					UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
-			}else
-			{
-// 				int pos = UserInfoDlg.m_CombState.GetCurSel();
-// 				if (pos < 0)
+// 		CDlgUserInfo UserInfoDlg;
+// 		UserInfoDlg.m_tagUserInfo = m_UserScoreSet;
+// 
+// 		if (UserInfoDlg.DoModal() == IDOK)
+// 		{
+// 			//return FALSE;
+// 			CString WinMax,LoseMax,NotifyWin,NotifyLose,lRate,WinLoseScore,ltype;
+// 
+// 			if (UserInfoDlg.m_AllowSet == 1)
+// 			{
+// 				if (_ttoi64(WinLoseScore)>_ttoi64(WinMax) || _ttoi64(WinLoseScore)<_ttoi64(LoseMax))
 // 				{
-// 					ntype = MAXDEFAULT;
+// 					AfxMessageBox("设置输赢分数不能高于赢最高,或者低于输最高！");
+// 					return FALSE;
 // 				}
-			OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
-					UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
-			}
-		}
+// 				OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
+// 					UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
+// 			}else
+// 			{
+// // 				int pos = UserInfoDlg.m_CombState.GetCurSel();
+// // 				if (pos < 0)
+// // 				{
+// // 					ntype = MAXDEFAULT;
+// // 				}
+// 				OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
+// 					UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
+// 			}
+// 		}
 
 	}
 
@@ -3021,6 +3026,7 @@ void CUserInfoList::OnFrozen()
 
 //		CString str;
 		m_strSelectUser.Delete(m_strSelectUser.GetLength()-1,1);
+		UserID->dwType=0;
 		sprintf(UserID->szUserID,m_strSelectUser);
 		sprintf(UserID->szForzen,FrezonDlg.m_strFrezonReason);
 
@@ -3031,4 +3037,69 @@ void CUserInfoList::OnFrozen()
 	}else
 		return;
 	
+}
+
+void CUserInfoList::OnKick()
+{
+	// TODO: 在此添加命令处理程序代码
+	CString strFresonReason;
+	CCDlgFrezon FrezonDlg;
+	//if (FrezonDlg.DoModal()==IDOK)
+	//{
+		//		strFresonReason=FrezonDlg.m_strFrezonReason;
+
+		tagUserID* UserID;
+		ZeroMemory(UserID,sizeof(UserID));
+
+		//		CString str;
+		m_strSelectUser.Delete(m_strSelectUser.GetLength()-1,1);
+		UserID->dwType=1;
+		sprintf(UserID->szUserID,m_strSelectUser);
+	//	sprintf(UserID->szForzen,FrezonDlg.m_strFrezonReason);
+
+
+		ASSERT(CMissionUserInfo::GetInstance()!=NULL);
+		CMissionUserInfo::GetInstance()->OnFrezon(UserID);
+
+	//}else
+	//	return;
+}
+
+void CUserInfoList::OnShowUserInfoDlg(tagUMSameMachine *pSameMachine)
+{
+	CDlgUserInfo UserInfoDlg;
+	UserInfoDlg.m_tagUserInfo = m_UserScoreSet;
+	UserInfoDlg.m_tagSameMachine.dwCount = pSameMachine->dwCount;
+
+	for (int i=0;i<pSameMachine->dwCount;i++)
+	{
+		UserInfoDlg.m_tagSameMachine.SameMachineItem[i] = pSameMachine->SameMachineItem[i];
+	}
+
+
+	if (UserInfoDlg.DoModal() == IDOK)
+	{
+		//return FALSE;
+		CString WinMax,LoseMax,NotifyWin,NotifyLose,lRate,WinLoseScore,ltype;
+
+		if (UserInfoDlg.m_AllowSet == 1)
+		{
+			if (_ttoi64(WinLoseScore)>_ttoi64(WinMax) || _ttoi64(WinLoseScore)<_ttoi64(LoseMax))
+			{
+				AfxMessageBox("设置输赢分数不能高于赢最高,或者低于输最高！");
+				return;
+			}
+			OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
+				UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
+		}else
+		{
+			// 				int pos = UserInfoDlg.m_CombState.GetCurSel();
+			// 				if (pos < 0)
+			// 				{
+			// 					ntype = MAXDEFAULT;
+			// 				}
+			OnSetUserScoreInfo(UserInfoDlg.m_tagUserInfo.dwUserID,UserInfoDlg.WinMax,UserInfoDlg.LoseMax,UserInfoDlg.NotifyWin,
+				UserInfoDlg.NotifyLose,UserInfoDlg.lRate,UserInfoDlg.WinLoseScore,UserInfoDlg.ntype);
+		}
+	}
 }

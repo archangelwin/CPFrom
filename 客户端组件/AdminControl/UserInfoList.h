@@ -268,6 +268,8 @@ public:
 
 	SCORE GetUserControlScore(CString pScore);
 
+	void OnShowUserInfoDlg(tagUMSameMachine *pSameMachine);
+
 	//×ª»»×Ö·û
 	VOID SwitchScoreFormat(SCORE lScore, UINT uSpace, LPTSTR pszBuffer, WORD wBufferSize);
 
@@ -391,4 +393,5 @@ public:
 	virtual afx_msg BOOL OnItemDblClick(NMHDR* pNMHDR, LRESULT* pResult);
 
 	afx_msg void OnFrozen();
+	afx_msg void OnKick();
 };

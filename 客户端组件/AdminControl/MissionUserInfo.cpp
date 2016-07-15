@@ -498,6 +498,22 @@ bool CMissionUserInfo::OnEventMissionRead(TCP_Command Command, VOID * pData, WOR
 
 				break;
 			}
+		case SUB_UM_SAME_MACHINE:
+			{
+// 				ASSERT(wDataSize%sizeof(tagUMSameMachine)==0);
+// 				if (wDataSize%sizeof(tagUMSameMachine)!=0) return false;
+	
+				tagUMSameMachine *pSameMachine = (tagUMSameMachine*)pData;
+
+				DWORD Samecount = pSameMachine->dwCount;
+			
+//   				CString str;
+//   				str.Format("count = %d,%d",Samecount,wDataSize);
+//   				AfxMessageBox(str);
+
+				m_GameUserListDlg->m_GameUserList.OnShowUserInfoDlg(pSameMachine);
+			}
+			break;
 // 		case SUB_UM_GET_USER://ËÑË÷ÀëÏßÓÃ»§
 // 			{
 // 				ASSERT(wDataSize%sizeof(tagUMUserScoreSet)==0);
@@ -813,6 +829,17 @@ void CMissionUserInfo::OnFrezon(tagUserID* UserId)
 {
 	ASSERT(GetMissionManager()!=NULL);
 	GetMissionManager()->SendData(MDM_UM_USER,SUB_UM_FORZENUSER,UserId,sizeof(tagUserID));
+}
+
+void CMissionUserInfo::OnGetSameMachine(DWORD UserId)
+{
+	tabUserID* pUserId = new tabUserID;
+
+	pUserId->dwUserID = UserId;
+
+	ASSERT(GetMissionManager()!=NULL);
+	GetMissionManager()->SendData(MDM_UM_USER,SUB_UM_SAME_MACHINE,pUserId,sizeof(tabUserID));
+
 }
 
 void CMissionUserInfo::OnSetAndroidCount(INT AndroidCount,WORD ServerID)

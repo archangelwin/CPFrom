@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (ea854ed9).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (88999051).
 //
-// e:\backup\cplatform2\客户端组件\admincontrol\release\msxml3.tlh
+// d:\backcpfrom\cpfrom\客户端组件\admincontrol\release\msxml3.tlh
 //
 // C++ source equivalent of Win32 type library msxml3.dll
-// compiler-generated file created 12/10/15 at 18:58:57 - DO NOT EDIT!
+// compiler-generated file created 07/11/16 at 17:27:17 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -5133,7 +5133,7 @@ ISchemaNotation : ISchemaItem
 // Wrapper method implementations
 //
 
-#include "e:\backup\cplatform2\客户端组件\admincontrol\release\msxml3.tli"
+#include "d:\backcpfrom\cpfrom\客户端组件\admincontrol\release\msxml3.tli"
 
 } // namespace MSXML2
 

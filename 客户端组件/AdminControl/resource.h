@@ -359,6 +359,7 @@
 #define IDC_STWARINNING                 1151
 #define IDC_BT_ANDROIDCOUNT             1152
 #define IDC_ANDROIDCOUNT                1153
+#define IDC_total                       1154
 #define IDB_BITMAP2                     1202
 #define ID_32773                        32773
 #define IDM_USER_LOGON                  32774
@@ -553,14 +554,18 @@
 #define ID_VIP_32931                    32931
 #define ID_FRZZ                         32932
 #define ID_FROZEN                       32933
+#define ID_VIP_32934                    32934
+#define ID_                             32935
+#define ID_Kick                         32936
+#define ID_32937                        32937
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        184
-#define _APS_NEXT_COMMAND_VALUE         32934
-#define _APS_NEXT_CONTROL_VALUE         1154
+#define _APS_NEXT_COMMAND_VALUE         32938
+#define _APS_NEXT_CONTROL_VALUE         1155
 #define _APS_NEXT_SYMED_VALUE           108
 #endif
 #endif

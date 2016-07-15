@@ -40,9 +40,9 @@
 #ifndef _DEBUG
 
 //平台常量
-const TCHAR	szProduct[]=TEXT("七彩牛");							//产品名字（任务栏显示的）
+const TCHAR	szProduct[]=TEXT("棋牌");							//产品名字（任务栏显示的）
 const TCHAR szPlazaClass[]=TEXT("LMYGAME");					//广场类名
-const TCHAR szProductKey[]=TEXT("七彩牛");					//产品主键
+const TCHAR szProductKey[]=TEXT("棋牌");					//产品主键
 
 //地址定义
 const TCHAR szCookieUrl[]=TEXT("http://www.999qp.com");						//记录地址
@@ -57,9 +57,9 @@ const TCHAR szPayUrl[]=TEXT("http://pay.999qp.com");						//充值地址
 //内测版本
 
 //平台常量
-const TCHAR	szProduct[]=TEXT("龙马游");							//产品名字
+const TCHAR	szProduct[]=TEXT("棋牌");							//产品名字
 const TCHAR szPlazaClass[]=TEXT("LMYGAME");						//广场类名
-const TCHAR szProductKey[]=TEXT("龙马游");					//产品主键
+const TCHAR szProductKey[]=TEXT("棋牌");					//产品主键
 
 //地址定义
 const TCHAR szCookieUrl[]=TEXT("http://www.999qp.com");						//记录地址

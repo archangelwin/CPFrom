@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (df9823e0).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (b7d4abe2).
 //
-// c:\cplatform\客户端组件\形象组件\release\flash.tlh
+// d:\backcpfrom\cpfrom\客户端组件\形象组件\release\flash.tlh
 //
 // C++ source equivalent of Win32 type library Flash.ocx
-// compiler-generated file created 12/31/14 at 09:29:13 - DO NOT EDIT!
+// compiler-generated file created 07/11/16 at 10:39:44 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -631,7 +631,7 @@ extern "C" const GUID __declspec(selectany) CLSID_FlashObjectInterface =
 // Wrapper method implementations
 //
 
-#include "c:\cplatform\客户端组件\形象组件\release\flash.tli"
+#include "d:\backcpfrom\cpfrom\客户端组件\形象组件\release\flash.tli"
 
 } // namespace ShockwaveFlashObjects
 

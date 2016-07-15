@@ -1,5 +1,6 @@
 #pragma once
 #include "afxwin.h"
+#include "afxcmn.h"
 
 
 // CDlgUserInfo 对话框
@@ -20,9 +21,13 @@ public:
 
 	tagUMUserScoreSet  m_tagUserInfo;
 
+	tagUMSameMachine  m_tagSameMachine;
+
 	SetType     m_Type;
 
 	INT         m_AllowSet;
+
+	SCORE       m_totalWL;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
@@ -59,4 +64,8 @@ public:
 	afx_msg void OnBnClickedRadio1();
 	afx_msg void OnBnClickedRadio2();
 	afx_msg void OnBnClickedRadio3();
+	CListCtrl m_ListCtrl;
+
+	VOID OnInsertSameMachine(tagUMSameMachineItem tagsameitem,DWORD samecount);
+	CStatic m_total;
 };

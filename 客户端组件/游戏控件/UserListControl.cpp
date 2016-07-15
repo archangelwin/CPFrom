@@ -444,14 +444,14 @@ INT CUserListControl::SortItemData(LPARAM lParam1, LPARAM lParam2, WORD wColumnI
 			INT nResult=cbUserStatus1>cbUserStatus2?SORT_AFTER:SORT_FRONT;
 			return (bAscendSort==true)?nResult:-nResult;
 		}
-	case UD_RANK: //ccy20141204
-		{
-			WORD cbRank1=pIClientUserItem1->GetMatchRank();
-			WORD cbRank2=pIClientUserItem2->GetMatchRank();
-
-			INT nResult=cbRank1>cbRank2?SORT_AFTER:SORT_FRONT;
-			return (bAscendSort==true)?nResult:-nResult;
-		}
+// 	case UD_RANK: //ccy20141204
+// 		{
+// 			WORD cbRank1=pIClientUserItem1->GetMatchRank();
+// 			WORD cbRank2=pIClientUserItem2->GetMatchRank();
+// 
+// 			INT nResult=cbRank1>cbRank2?SORT_AFTER:SORT_FRONT;
+// 			return (bAscendSort==true)?nResult:-nResult;
+// 		}
 	}
 
 	return 0L;

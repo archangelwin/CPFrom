@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (6946bc69).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (6bad07d0).
 //
-// c:\cplatform\客户端组件\游戏框架\release\flash.tli
+// d:\backcpfrom\cpfrom\客户端组件\游戏框架\release\flash.tli
 //
 // Wrapper implementations for Win32 type library Flash.ocx
-// compiler-generated file created 12/31/14 at 09:29:23 - DO NOT EDIT!
+// compiler-generated file created 07/11/16 at 10:40:00 - DO NOT EDIT!
 
 #pragma once
 

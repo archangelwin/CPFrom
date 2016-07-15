@@ -3648,7 +3648,7 @@ bool CServerViewItem::OnSocketSubUserScore(VOID * pData, WORD wDataSize)
 	tagGlobalUserData * pGlobalUserData=pGlobalUserInfo->GetGlobalUserData();
 
 	//用户排名
-	pGlobalUserData->dwRank = pUserScore->UserScore.dwRank;
+//	pGlobalUserData->dwRank = pUserScore->UserScore.dwRank;
 
 	//变量定义
 	bool bMySelfUserItem=pGlobalUserData->dwUserID==pUserScore->dwUserID;

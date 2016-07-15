@@ -1571,11 +1571,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\res\PLAZA_MATCH\TABLE_TL.bmp"
+				RelativePath=".\res\SERVER_TABLE\TABLE_TL.bmp"
 				>
 			</File>
 			<File
-				RelativePath=".\res\SERVER_TABLE\TABLE_TL.bmp"
+				RelativePath=".\res\PLAZA_MATCH\TABLE_TL.bmp"
 				>
 			</File>
 			<File
@@ -1587,11 +1587,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\res\PLAZA_MATCH\TABLE_TR.bmp"
+				RelativePath=".\res\SERVER_TABLE\TABLE_TR.bmp"
 				>
 			</File>
 			<File
-				RelativePath=".\res\SERVER_TABLE\TABLE_TR.bmp"
+				RelativePath=".\res\PLAZA_MATCH\TABLE_TR.bmp"
 				>
 			</File>
 			<File
