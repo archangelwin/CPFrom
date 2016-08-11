@@ -729,13 +729,17 @@ void CMissionUserInfo::OnGetStroag()
 
 void CMissionUserInfo::OnSetStroag()
 {
-	WORD wPacketSize;
+	DWORD wPacketSize;
 	BYTE cbBuffer[SOCKET_TCP_PACKET];
 	ZeroMemory(&cbBuffer,sizeof(cbBuffer));
 
 //	wPacketSize = m_StockDlg->m_StockList.OnSetStockDataInfo(cbBuffer,sizeof(cbBuffer));
 	
 	wPacketSize = m_StockDlg->OnSetStock(cbBuffer,sizeof(cbBuffer));
+
+	CString stt;
+	stt.Format("%d",wPacketSize);
+	AfxMessageBox(stt);
 
 	if (wPacketSize == 0)
 	{

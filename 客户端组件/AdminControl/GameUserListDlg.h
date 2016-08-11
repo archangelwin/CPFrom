@@ -51,6 +51,8 @@ public:
 
 	bool       m_IsHide;
 
+	bool       m_bhidelookup;
+
 	CTranferUserInfo    m_lTranferInfoMap; //转账用户MAP
 public:
 	SCORE    m_lMaxWin;                 //赢分数
@@ -199,4 +201,6 @@ public:
 	CButton m_btAndroidCount;
 	CEdit m_EdAndroidCount;
 	afx_msg void OnBnClickedBtAndroidcount();
+	afx_msg void OnEnSetfocusRicheditLookup();
+	afx_msg void OnEnKillfocusRicheditLookup();
 };

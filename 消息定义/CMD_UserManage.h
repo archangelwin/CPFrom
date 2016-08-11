@@ -450,7 +450,7 @@ struct tabStoragStartArray
 		memset(this, 0, sizeof(tabStoragStartArray));
 	}
 	DWORD dwCount;
-	tabStoragStart StoragStart[100];
+	tabStoragStart StoragStart[200];
 };
 //在线管理员
 struct tagAdmin

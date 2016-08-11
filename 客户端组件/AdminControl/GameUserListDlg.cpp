@@ -117,6 +117,8 @@ BEGIN_MESSAGE_MAP(CGameUserListDlg, CDialog)
 	ON_NOTIFY(EN_LINK, IDC_RICHEDIT21, &CGameUserListDlg::OnEnLinkRichedit21)
 	ON_BN_CLICKED(IDC_BUTTON_SWICHTING, &CGameUserListDlg::OnBnClickedButtonSwichting)
 	ON_BN_CLICKED(IDC_BT_ANDROIDCOUNT, &CGameUserListDlg::OnBnClickedBtAndroidcount)
+	ON_EN_SETFOCUS(IDC_RICHEDIT_LOOKUP, &CGameUserListDlg::OnEnSetfocusRicheditLookup)
+	ON_EN_KILLFOCUS(IDC_RICHEDIT_LOOKUP, &CGameUserListDlg::OnEnKillfocusRicheditLookup)
 END_MESSAGE_MAP()
 
 
@@ -178,6 +180,7 @@ BOOL CGameUserListDlg::OnInitDialog()
 
 	m_IsTanking = 0;
 	m_ServerID = 0;
+	m_bhidelookup=false;
 	m_StTodayScore.SetWindowText("当天累计输赢:");
 	m_StTodayTankingScore.SetWindowText("当天累计放水:");
 	m_StCurTankingScore.SetWindowText("当前放水:");
@@ -356,7 +359,7 @@ void CGameUserListDlg::OnSize(UINT nType, int cx, int cy)
 		m_GameUserList.MoveWindow(m_Rect.left,m_Rect.top,m_Rect.Width()-10,m_Rect.Height()-200);
 		
 		m_BtSwitching.MoveWindow(m_Rect.left+370,m_Rect.Height()-200/*+25*/,60,25);
-		m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,220,130);
+		m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,220,150);
 
 		m_Game.MoveWindow(m_Rect.left+10,m_Rect.Height()-200+45,60,20);
 		m_Win.MoveWindow(m_Rect.left+10,m_Rect.Height()-200+75,60,20);
@@ -419,12 +422,15 @@ void CGameUserListDlg::OnSize(UINT nType, int cx, int cy)
 		m_UserGameID.MoveWindow(m_Rect.left+900,m_Rect.Height()-200+5,100,30);
 		m_STSearch.MoveWindow(m_Rect.left+840,m_Rect.Height()-200+10,60,20);
 
-		m_RichEd.MoveWindow(m_Rect.left+700,m_Rect.Height()-200+38,470,160);
+		m_RichEd.MoveWindow(m_Rect.left+700,m_Rect.Height()-200+38,470+200,160);
 
 
 		//机器人个数
 		m_EdAndroidCount.MoveWindow(m_Rect.left+175+70,m_Rect.Height()-200+135,50+30,30);
 		m_btAndroidCount.MoveWindow(m_Rect.left+175+70,m_Rect.Height()-200+165,50+30,30);
+
+// 		m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,220,130);
+// 		m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,620,130);
 	}
 }
 
@@ -1385,4 +1391,29 @@ void CGameUserListDlg::OnBnClickedBtAndroidcount()
 	szInfo.Format("已经为 %s 添加 %d 个机器人！",m_GameName,wAndroidCount);
 
 	AfxMessageBox(szInfo);
+}
+
+void CGameUserListDlg::OnEnSetfocusRicheditLookup()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	CRect m_Rect;
+	GetClientRect(&m_Rect);
+
+	if (m_bhidelookup==false)
+	{
+		m_bhidelookup=true;
+		//m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,220,130);
+		m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,700,150);
+		//AfxMessageBox("111111111111");
+	}
+
+}
+
+void CGameUserListDlg::OnEnKillfocusRicheditLookup()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	CRect m_Rect;
+	GetClientRect(&m_Rect);
+	m_bhidelookup=false;
+	m_LookUpRhEd.MoveWindow(m_Rect.left,m_Rect.Height()-200+50,220,150);
 }
